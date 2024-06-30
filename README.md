@@ -1,4 +1,3 @@
-```markdown
 # Gallery App
 
 Welcome to the Gallery App! This repository contains a full-stack web application developed using the following technologies:
@@ -118,4 +117,3 @@ Ensure you have the following installed:
 - [Neon Database](https://neon.tech/)
 - [Tailwind CSS](https://tailwindcss.com/)
 
-```
