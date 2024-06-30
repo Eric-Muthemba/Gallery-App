@@ -58,13 +58,15 @@ Ensure you have the following installed:
 
 4. **Configure environment variables:**
 
-    Create a `.env` file in the root directory and add the following environment variables:
+    Create a `.env` file in the root directory from the .env.example file and add the fill the subsequent environment variables:
 
     ```env
-    DATABASE_URL=your_postgresql_connection_string
-    NEXTAUTH_SECRET=your_nextauth_secret
-    NEXTAUTH_URL=http://localhost:3000
-    UPLOADTHING_SECRET=your_uploadthing_secret
+    UPLOADTHING_SECRET=""
+    DATABASE_URL=""
+    NEXTAUTH_URL=""
+    NEXTAUTH_SECRET=""
+    GOOGLE_CLIENT_ID=""
+    GOOGLE_CLIENT_SECRET=""
     ```
 
 5. **Run database migrations:**
