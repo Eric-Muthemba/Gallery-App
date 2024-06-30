@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 interface HomeClientProps {
-  session: any;
+  session?: unknown;
 }
 
 export default function HomeClient({ session }: HomeClientProps) {
