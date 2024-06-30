@@ -3,12 +3,11 @@
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import {useSession} from "next-auth/react";
 
-interface HomeClientProps {
-  session?: unknown;
-}
 
-export default function HomeClient({ session }: HomeClientProps) {
+export default function HomeClient( ) {
+  const session = useSession();
   const cards = [
     { imageUrl: 'https://via.placeholder.com/300', description: 'Image 1' },
     { imageUrl: 'https://via.placeholder.com/300', description: 'Image 2' },
@@ -141,7 +140,7 @@ function AddPictureModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => 
   };
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (event.target.files && event.target.files[0]) {
+    if (event.target.files?.[0]) {
       setFile(event.target.files[0]);
     }
   };
