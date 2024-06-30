@@ -1,29 +1,121 @@
-# Create T3 App
+```markdown
+# Gallery App
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+Welcome to the Gallery App! This repository contains a full-stack web application developed using the following technologies:
+ project is a full-stack Gallery App developed using `t3app`, `tRPC`, `Next.js`, `NextAuth.js`, `Prisma`, `Tanstack`, `UploadThings`, Neon database (PostgreSQL), and `Tailwind CSS`.
 
-## What's next? How do I make an app with this?
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+- **Authentication**: Secure user authentication and authorization using NextAuth.js and google as a provider.
+- **Database**: Integration with Prisma ORM for managing PostgreSQL database interactions.
+- **Image Uploads**: Ability to upload images using UploadThings.
+- **Responsive UI**: Designed using Tailwind CSS for a responsive and modern user interface.
+- **Dynamic Routing**: Utilizes Next.js for dynamic client-side routing.
+- **Server-Client Communication**: Implements tRPC for type-safe server-client communication.
+- **Optimized Performance**: Built with Tanstack for optimized performance and developer experience.
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+## Features
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+- User authentication and authorization using NextAuth.js.
+- Responsive design with Tailwind CSS.
+- Image upload and management.
+- Secure and efficient data handling with Prisma and PostgreSQL.
 
-## Learn More
+## Getting Started
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+Follow the instructions below to set up and run the project locally.
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+### Prerequisites
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+Ensure you have the following installed:
 
-## How do I deploy this?
+- Node.js (>=14.x)
+- npm or yarn
+- PostgreSQL database
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+### Installation
+
+1. **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/Eric-Muthemba/Gallery-App
+    cd gallery-app
+    ```
+
+2. **Install dependencies:**
+
+    Using npm:
+    ```bash
+    npm install
+    ```
+
+    Using yarn:
+    ```bash
+    yarn install
+    ```
+
+3. **Set up the database:**
+
+    Create a new PostgreSQL database using Neon Database or your local PostgreSQL setup. Copy the database connection string.
+
+4. **Configure environment variables:**
+
+    Create a `.env` file in the root directory and add the following environment variables:
+
+    ```env
+    DATABASE_URL=your_postgresql_connection_string
+    NEXTAUTH_SECRET=your_nextauth_secret
+    NEXTAUTH_URL=http://localhost:3000
+    UPLOADTHING_SECRET=your_uploadthing_secret
+    ```
+
+5. **Run database migrations:**
+
+    Using npm:
+    ```bash
+    npx prisma migrate dev
+    ```
+
+    Using yarn:
+    ```bash
+    yarn prisma migrate dev
+    ```
+
+6. **Generate Prisma client:**
+
+    Using npm:
+    ```bash
+    npx prisma generate
+    ```
+
+    Using yarn:
+    ```bash
+    yarn prisma generate
+    ```
+
+### Running the Application
+
+1. **Start the development server:**
+
+    Using npm:
+    ```bash
+    npm run dev
+    ```
+
+    Using yarn:
+    ```bash
+    yarn dev
+    ```
+
+2. Open your browser and navigate to `http://localhost:3000`.
+
+
+## Acknowledgements
+
+- [Next.js](https://nextjs.org/)
+- [Prisma](https://www.prisma.io/)
+- [TanStack](https://tanstack.com/)
+- [Uploadthing](https://uploadthing.com/)
+- [Neon Database](https://neon.tech/)
+- [Tailwind CSS](https://tailwindcss.com/)
+
+```
